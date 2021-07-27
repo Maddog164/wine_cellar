@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {addWine} from './wineActions'
+import {addWine} from './actions/wineActions'
 
 class NewWineForm extends Component {
     state = {

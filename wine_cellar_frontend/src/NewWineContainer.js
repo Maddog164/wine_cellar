@@ -1,12 +1,13 @@
 import React, {Component} from 'react'
-import UserForm from './UserForm'
+// import UserForm from './UserForm'
+import NewWineForm from './NewWineForm'
 import {connect} from 'react-redux'
-import {addUser} from './userActions'
+import {addUser} from './actions/userActions'
 
 class NewWineContainer extends Component {
     
     render() {
-        const findUser = this.props.users.find(user => user.id == this.props.match.params.user)
+        const findUser = this.props.users.find(user => user.id === parseInt(this.props.match.params.id))
         console.log('findWine', this.props)
         return(
             <div>
@@ -19,7 +20,7 @@ class NewWineContainer extends Component {
 
 const mapStateToProps = state => {
     return {
-        users: state}
+        users: state.users}
 }
 
 const mapDispatchToProps = dispatch => {
@@ -28,4 +29,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps)(NewWineContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(NewWineContainer)

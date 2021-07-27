@@ -1,10 +1,14 @@
 import React, {Component} from 'react'
 import UserForm from './UserForm'
 import {connect} from 'react-redux'
-// import {Link} from 'react-router-dom'
-import {addUser} from './userActions'
+import {Link} from 'react-router-dom'
+import {addUser, getAllUsers} from './actions/userActions'
 
 class UserContainer extends Component {
+
+    componentDidMount() {
+        this.props.getAllUsers()
+    }
 
     handleAddUser = (user) => {
         // this.props.addUser(user)
@@ -15,8 +19,8 @@ class UserContainer extends Component {
         return(
             <div>
                 <UserForm handleAddUser={this.handleAddUser}/>
-                {this.props.users.map(user => (
-                    <p>{user.firstName} {user.lastName}</p>
+                {this.props.drivers && this.props.users.map(user => (
+                    <p><Link to={{pathname: `/users/${user.id}`}} > {user.firstName} {user.lastName} </Link></p>
                 ))}
             </div>
         )
@@ -24,12 +28,13 @@ class UserContainer extends Component {
 }
 
 const mapStateToProps = state => {
-    return {users: state.users}
+    return {users: state.userReducer.users}
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        addUser: (user) => dispatch(addUser(user))
+        addUser: (user) => dispatch(addUser(user)),
+        getAllUsers: () => dispatch(getAllUsers())
     }
 }
 

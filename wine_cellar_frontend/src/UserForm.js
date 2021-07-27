@@ -1,10 +1,14 @@
 import React, {Component} from 'react'
+// import React, {useState} from 'react'
+import {addUser} from './actions/userActions'
+import {connect} from 'react-redux'
 
 class UserForm extends Component {
 
     state = {
         firstName: "",
-        lastName: ""
+        lastName: "",
+        id: 1
 
     }
 
@@ -17,13 +21,15 @@ class UserForm extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
-        this.props.handleAddUser(this.state)
+        console.log("in userform", this.state.firstName, this.state.lastName, this.state.id)
+        this.props.addUser(this.state)
 
 
-        this.setState({
+        this.setState(prevState =>({
             firstName: "",
-            lastName: ""
-        })
+            lastName: "",
+            id: prevState.id + 1
+        }))
 
     }
 
@@ -43,4 +49,4 @@ class UserForm extends Component {
     }
 }
 
-export default UserForm
+export default connect(null, {addUser})(UserForm)

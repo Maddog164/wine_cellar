@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 const UserShow = (props) => {
 
-    const user = props.users.find(user => user.id == props.match.params.id)
+    const user = props.users.find(user => user.id === parseInt(props.match.params.id, 10))
     return(
         <div>
             {user ? <div>
