@@ -11,7 +11,7 @@ export const addUser = user => {
 // export const getAllUsers = () => {
 //     return (dispatch) => {
 //         dispatch({type: "LOADING_USERS", loading: true})
-//         fetch("http://localhost:3001/users")
+//         fetch("http://localhost:3000/users")
 //         .then(response => response.json())
 //         .then(response => dispatch({type: "GET_ALL_USERS", users: response}))
 //     }
