@@ -6,8 +6,8 @@ import {connect} from 'react-redux'
 class UserForm extends Component {
 
     state = {
-        firstName: "",
-        lastName: "",
+        first_name: "",
+        last_name: "",
         id: 1
 
     }
@@ -21,13 +21,13 @@ class UserForm extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
-        console.log("in userform", this.state.firstName, this.state.lastName, this.state.id)
+        console.log("in userform", this.state.first_name, this.state.last_name, this.state.id)
         this.props.addUser(this.state)
 
 
         this.setState(prevState =>({
-            firstName: "",
-            lastName: "",
+            first_name: "",
+            last_name: "",
             id: prevState.id + 1
         }))
 
@@ -37,10 +37,10 @@ class UserForm extends Component {
         return(
             <form onSubmit ={this.handleSubmit}>
                 <label>First Name:</label>
-                <input type="text" name="firstName" value={this.state.firstName} onChange={this.handleOnChange}></input>
+                <input type="text" name="first_name" value={this.state.first_name} onChange={this.handleOnChange}></input>
                 <br/>
                 <label>Last Name:</label>
-                <input type="text" name="lastName" value={this.state.lastName} onChange={this.handleOnChange}></input>
+                <input type="text" name="last_name" value={this.state.last_name} onChange={this.handleOnChange}></input>
                 <br/>
                 <input type="submit" value="Create New User" />
             </form>

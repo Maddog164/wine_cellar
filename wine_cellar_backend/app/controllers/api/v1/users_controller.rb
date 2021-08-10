@@ -1,16 +1,30 @@
-require './config/environment'
-require './app/models/user'
+# require './config/environment'
+# require './app/models/user'
 
-class UsersController < ApplicationController
+class Api::V1::UsersController < ApplicationController
 
-    def new
+    # def new
+    # end
+
+    def index
+        @users = User.all
+        render json: @users
+    end
+
+    def show
+        @user = User.find_by(:id => params[:id].to_i)
+        render json: UserSerializer.new(@usere).to_serialized_json
     end
 
     def create
-        @user = User.create(user_params)
-        return redirect_to controller: 'users', action: 'new' unless @user.save
-        session[:user_id] = @user.id
-        redirect_to controller: 'wines', action: 'index'
+        binding.pry
+        if User.find_by(:name => user_params[:name])
+            @user = User.find_by(:name => wine_params[:name])
+            ender json: UserSerializer.new(@user).to_serialized_json
+        else
+            @user = User.create(user_params)
+            render json: UserSerializer.new(@user).to_serialized_json
+        end
     end
 
     private

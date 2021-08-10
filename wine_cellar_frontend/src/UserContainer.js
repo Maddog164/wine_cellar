@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import UserForm from './UserForm'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
-import {addUser} from './actions/userActions'
+import {addUser, getAllUsers} from './actions/userActions'
 // import {addUser, getAllUsers} from './actions/userActions'
 
 class UserContainer extends Component {
@@ -13,7 +13,7 @@ class UserContainer extends Component {
 
     handleAddUser = (user) => {
         // this.props.addUser(user)
-        this.props.dispatch()
+        this.props.addUser()
     }
 
     render() {
@@ -34,8 +34,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        addUser: (user) => dispatch(addUser(user))
-        // getAllUsers: () => dispatch(getAllUsers())
+        addUser: (user) => dispatch(addUser(user)),
+        getAllUsers: () => dispatch(getAllUsers())
     }
 }
 
