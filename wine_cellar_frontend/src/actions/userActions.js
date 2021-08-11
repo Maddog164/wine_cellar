@@ -2,13 +2,17 @@
 
 export const addUser = user => {
     console.log("useractions", user)
+    console.log(user.first_name, user.last_name)
+    let formData = user
     return (dispatch) => {
         fetch("http://localhost:3001/api/v1/users", {
             method: "POST",
+            credentials: 'include', 
             headers: {
                 "content-type": 'application/json'
+            //     "Accept": "application/json"
             },
-            body: JSON.stringify(user)
+            body: JSON.stringify(formData)
         })
         .then(response => response.json())
         .then(response => dispatch({type: "ADD_USER", user: response}))

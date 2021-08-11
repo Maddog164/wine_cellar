@@ -30,15 +30,17 @@ module WineCellarBackend
     # the framework and any gems in your application.
 
     # Don't generate system test files.
+    config.hosts.clear
     config.api_only = true
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins '*'
+        origins 'http://localhost:3000'
         resource(
           '*',
           headers: :any,
-          methods: [:get, :patch, :put, :delete, :post, :options]
+          methods: :any,
+          credentials: true
           )
       end
     end 
