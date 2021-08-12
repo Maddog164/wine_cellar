@@ -33,16 +33,16 @@ module WineCellarBackend
     config.hosts.clear
     config.api_only = true
 
-    config.middleware.insert_before 0, Rack::Cors do
-      allow do
-        origins 'http://localhost:3000'
-        resource(
-          '*',
-          headers: :any,
-          methods: :any,
-          credentials: true
-          )
-      end
-    end 
+    # config.middleware.insert_before 0, Rack::Cors do
+    #   allow do
+    #     origins 'http://localhost:3000'
+    #     resource(
+    #       '*',
+    #       headers: :any,
+    #       methods: :any,
+    #       credentials: true
+    #       )
+    #   end
+    # end 
   end
 end

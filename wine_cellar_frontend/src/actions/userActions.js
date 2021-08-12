@@ -8,7 +8,7 @@ export const addUser = user => {
         fetch("http://localhost:3001/api/v1/users", {
             method: "POST",
             credentials: 'include', 
-            headers: {
+            header: {
                 "content-type": 'application/json'
             //     "Accept": "application/json"
             },
