@@ -8,7 +8,7 @@ class UserForm extends Component {
     state = {
         first_name: "",
         last_name: "",
-        id: 1
+        // id: 1
 
     }
 
@@ -21,14 +21,14 @@ class UserForm extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
-        console.log("in userform", this.state.first_name, this.state.last_name, this.state.id)
+        console.log("in userform", this.state.first_name, this.state.last_name)
         this.props.addUser(this.state)
 
 
         this.setState(prevState =>({
             first_name: "",
             last_name: "",
-            id: prevState.id + 1
+            // id: prevState.id + 1
         }))
 
     }

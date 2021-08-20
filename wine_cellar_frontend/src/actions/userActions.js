@@ -3,19 +3,23 @@
 export const addUser = user => {
     console.log("useractions", user)
     console.log(user.first_name, user.last_name)
-    let formData = user
+    // let formData = user
+    // console.log(formData)
     return (dispatch) => {
         fetch("http://localhost:3001/api/v1/users", {
             method: "POST",
             credentials: 'include', 
-            header: {
+            headers: {
                 "content-type": 'application/json'
             //     "Accept": "application/json"
             },
-            body: JSON.stringify(formData)
-        })
+            body: JSON.stringify({
+                user
+            })
+       })
         .then(response => response.json())
         .then(response => dispatch({type: "ADD_USER", user: response}))
+        //.then(users => dispatch({type: 'ADD_USER', payload: user}))
     }
 }
 
