@@ -2,7 +2,8 @@ import React, {Component} from 'react'
 import UserForm from './UserForm'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
-import {addUser, getAllUsers} from './actions/userActions'
+import {addUser, getAllUsers} from '../actions/userActions'
+import UsersList from './UsersList'
 // import {addUser, getAllUsers} from './actions/userActions'
 
 class UserContainer extends Component {
@@ -20,9 +21,10 @@ class UserContainer extends Component {
         return(
             <div>
                 <UserForm handleAddUser={this.handleAddUser}/>
-                {this.props.drivers && this.props.users.map(user => (
+                {/* {this.props.drivers && this.props.users.map(user => (
                     <p><Link to={{pathname: `/users/${user.id}`}} > {user.firstName} {user.lastName} </Link></p>
-                ))}
+                ))} */}
+                <UsersList />
             </div>
         )
     }
