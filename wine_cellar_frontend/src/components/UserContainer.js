@@ -24,7 +24,7 @@ class UserContainer extends Component {
                 <br></br>
                 Current Owners:
                 {this.props.users && this.props.users.map(user => (
-                    <p><Link to={{pathname: `/users/${user.id}`}} > {user.first_name} {user.last_name} </Link></p>
+                    <p><Link to={{pathname: `/users/${user.id}`, state: {users: user}}} > {user.first_name} {user.last_name} </Link></p>
                 ))}
                 
             </div>

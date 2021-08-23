@@ -7,6 +7,7 @@ import UserForm from './UserForm'
 import UsersList from './UsersList'
 import UserContainer from './UserContainer'
 import WineContainer from './WineContainer'
+import UserWinesContainer from './UserWinesContainer'
 // import About from '../components/About'
 
 const Router = () => {
@@ -19,6 +20,7 @@ const Router = () => {
             <Route exact path="/About" component={About} />
             {/* <Route path="/users" component = {UsersList} /> */}
             <Route path = "/wines" component = {WineContainer} />
+            <Route path = "/users/:id" component = {UserWinesContainer} />
         </Switch>
     )
 }

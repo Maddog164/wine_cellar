@@ -28,3 +28,12 @@ export const getAllWines = () => {
         .then(response => dispatch({type: "GET_ALL_WINES", wines: response}))
     }
 }
+
+// export const getUserWines = (userid) => {
+//     return (dispatch) => {
+//         dispatch({type: 'LOADING_WINES', loading: true})
+//         fetch("http://localhost:3001/api/v1/wines")
+//         .then(response => response.json())
+//         .then(response => dispatch({type: "GET_ALL_WINES", wines: response}))
+//     }
+// }
