@@ -1,5 +1,5 @@
 class WineSerializer<ActiveModel::Serializer
 
-    attributes :name, :color, :grape, :avg_price, :image_url
+    attributes :name, :color, :grape, :avg_price, :image_url, :country
 
 end

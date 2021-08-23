@@ -42,7 +42,7 @@ class UserForm extends Component {
                 <label>Last Name:</label>
                 <input type="text" name="last_name" value={this.state.last_name} onChange={this.handleOnChange}></input>
                 <br/>
-                <input type="submit" value="Create New User" />
+                <input type="submit" value="Create New Owner" />
             </form>
 
         )
