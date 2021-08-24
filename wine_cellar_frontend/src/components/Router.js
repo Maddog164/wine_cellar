@@ -10,6 +10,8 @@ import WineContainer from './WineContainer'
 import UserWinesContainer from './UserWinesContainer'
 // import About from '../components/About'
 
+
+
 const Router = () => {
     return (
         <Switch>
@@ -18,7 +20,7 @@ const Router = () => {
                 <Redirect to="/Home" />
             </Route>
             <Route exact path="/About" component={About} />
-            {/* <Route path="/users" component = {UsersList} /> */}
+            <Route path="/users" component = {UserContainer} />
             <Route path = "/wines" component = {WineContainer} />
             <Route path = "/users/:id" component = {UserWinesContainer} />
         </Switch>
