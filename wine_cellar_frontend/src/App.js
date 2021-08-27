@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
-import Router from './components/Router'
-import UserContainer from './components/UserContainer';
+import Routing from './components/Routing'
+// import UserContainer from './components/UserContainer';
 // import UserShow from './UserShow'
 // import NewWineContainer from './NewWineContainer'
 
@@ -19,7 +19,7 @@ function App() {
     //   </Router>
       <div>
         {/* <UserContainer /> */}
-        <Router />
+        <Routing />
       
       </div>
   );
