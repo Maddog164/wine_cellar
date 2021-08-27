@@ -35,7 +35,7 @@ export const getAllUsers = () => {
 export const getUserWines = (user) => {
     return (dispatch) => {
         dispatch({type: 'LOADING_WINES', loading: true})
-        fetch("http://localhost:3001/api/v1/wines/${user.id}")
+        fetch(`http://localhost:3001/api/v1/wines/${user.id}`)
         .then(response => response.json())
         .then(response => dispatch({type: "GET_USER_WINES", wines: response}))
     }
