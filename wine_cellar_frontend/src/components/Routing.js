@@ -31,14 +31,16 @@ class Routing extends Component {
                 </Route>
                 <Route exact path="/About" component={About} />
                 <Route
-                    path="/users"
+                    exact path="/users"
                     users={this.props.users}
                     wines={this.props.wines}
-                    component = {UserContainer} 
+                    component = {UserContainer}
                 />
+                <Route exact path = "/users/:id"
+                    exact component = {UserWinesContainer} /> 
 
-                <Route path = "/wines" component = {WineContainer} />
-                <Route path = "/users/:id" component = {UserWinesContainer} />
+                <Route exact path = "/wines" component = {WineContainer} />
+                
             </Switch>
         </Router>
         )

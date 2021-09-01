@@ -13,7 +13,7 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def show
-        binding.pry
+        # binding.pry
         @user = User.find_by(:id => params[:id].to_i)
         render json: @user
     end

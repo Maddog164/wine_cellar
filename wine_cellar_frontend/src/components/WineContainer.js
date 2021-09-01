@@ -22,12 +22,12 @@ class WineContainer extends Component {
             <div>
                 Current Wine List:
                 {this.props.wines && this.props.wines.map(wine => (
-                    <p>
+                    <p key={wine.id}>
                         <img
                         src = {wine.image_url}
                         alt = "new"
                          />
-                        <Link to={{pathname: `/wines/${wine.id}`}} >  {wine.name} </Link>
+                        <Link to={{pathname: `/wines/${wine.id}`}} >  {wine.id} {wine.name} </Link>
                     {wine.color} {wine.grape} {wine.country} {wine.avg_price}
                     
                     </p>

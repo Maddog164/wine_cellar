@@ -3,6 +3,8 @@ import UserForm from './UserForm'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {addUser, getAllUsers} from '../actions/userActions'
+// import {Switch, Route, Redirect, BrowserRouter as Router} from 'react-router-dom'
+// import UserWinesContainer from './UserWinesContainer'
 
 // import {addUser, getAllUsers} from './actions/userActions'
 
@@ -24,7 +26,8 @@ class UserContainer extends Component {
                 <br></br>
                 Current Owners:
                 {this.props.users && this.props.users.map(user => (
-                    <p><Link to={{pathname: `/users/${user.id}`, state: {users: user}}} > {user.first_name} {user.last_name} </Link></p>
+                    // <p key={user.id}><Link to={`/users/${user.id}`, state: user} > {user.first_name} {user.last_name} </Link></p>
+                    <p key={user.id}><Link to={{pathname: `/users/${user.id}`, state: user}} > {user.first_name} {user.last_name} </Link></p>
                 ))}
                 
             </div>

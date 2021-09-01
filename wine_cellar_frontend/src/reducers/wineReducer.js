@@ -3,9 +3,9 @@ const wineReducer = (state = [], action) => {
     
     //     console.log( action.payload)
         // console.log("userReducer", state.users)
-        console.log(action)
-        console.log(state)
-        console.log(action.wine)
+        // console.log(action)
+        // console.log(state)
+        // console.log(action.wine)
     
         switch (action.type) {
             

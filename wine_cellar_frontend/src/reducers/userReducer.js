@@ -5,9 +5,9 @@ const userReducer = (state = [], action) => {
 
 //     console.log( action.payload)
     // console.log("userReducer", state.users)
-    console.log(action)
-    console.log(state)
-    console.log(action.user)
+    // console.log(action)
+    // console.log(state)
+    // console.log(action.user)
 
     switch (action.type) {
         
