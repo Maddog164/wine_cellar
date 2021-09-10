@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+.clem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.Wine-img {
+  height: auto;
+  max-height: 250px;
+  width: auto;
+  max-width: 250px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+

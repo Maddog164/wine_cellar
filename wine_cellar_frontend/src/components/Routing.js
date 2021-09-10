@@ -37,7 +37,7 @@ class Routing extends Component {
                     component = {UserContainer}
                 />
                 <Route exact path = "/users/:id"
-                    exact component = {UserWinesContainer} /> 
+                    component = {UserWinesContainer} /> 
 
                 <Route exact path = "/wines" component = {WineContainer} />
                 
