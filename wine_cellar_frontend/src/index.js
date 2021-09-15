@@ -10,7 +10,7 @@ import wineReducer from './reducers/wineReducer'
 import thunk from 'redux-thunk'
 import {composeWithDevTools} from 'redux-devtools-extension'
 import {BrowserRouter as Router} from 'react-router-dom'
-// import 'bootstrap/dist/css/bootstrap.min.css'
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" />
 // import WineReducer from './reducers/WineReducer'
 
 const rootReducer = combineReducers({userReducer, wineReducer})
