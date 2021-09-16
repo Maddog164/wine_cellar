@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
 import UserForm from './UserForm'
 import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 import {addUser, getAllUsers} from '../actions/userActions'
+import UserCard from './UserCard'
 // import {Switch, Route, Redirect, BrowserRouter as Router} from 'react-router-dom'
 // import UserWinesContainer from './UserWinesContainer'
 
@@ -24,10 +25,13 @@ class UserContainer extends Component {
             <div>
                 <UserForm handleAddUser={this.handleAddUser}/>
                 <br></br>
-                Current Owners:
+                <p className="h1"><b>Current Owners:</b></p>
+                <hr/>
                 {this.props.users && this.props.users.map(user => (
                     // <p key={user.id}><Link to={`/users/${user.id}`, state: user} > {user.first_name} {user.last_name} </Link></p>
-                    <p key={user.id}><Link to={{pathname: `/users/${user.id}`, state: user}} > {user.first_name} {user.last_name} </Link></p>
+                    <UserCard
+                        user = {user} key={user.id} className="box">
+                    </UserCard>
                 ))}
                 
             </div>

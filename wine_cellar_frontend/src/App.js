@@ -8,21 +8,9 @@ import Routing from './components/Routing'
 
 function App() {
   return (
-    // <div className="App">
-    //   <Router>
-    //     <Switch>
-    //     <Route path="/users/new">
-    //       <UserContainer/>
-    //     </Route>
-    //     <Route exact path="/users/:id" render={(routerProps) => <UserShow {...routerProps} />} />
-    //     <Route exact path="/users/:userId/wines/new" render={(routerProps) => <NewWineContainer {...routerProps} />}/>
-    //     </Switch>
-    //   </Router>
-      <div>
-        {/* <UserContainer /> */}
-        <Routing />
-      
-      </div>
+    <div>
+      <Routing />
+    </div>
   );
 }
 
