@@ -8,7 +8,6 @@ const UserShow = (props) => {
     return(
         <div>
             {user ? <div>
-            {/* if driver exists */}
             {user.firstName} {user.lastName}
             <br/>
                 <Link to={{pathname: `${user.id}/wines/new`}}>Add new wine</Link>
