@@ -4,14 +4,11 @@ import {connect} from 'react-redux'
 import Navigate from './Nav'
 import About from './About'
 import Home from './Home'
-// import UserForm from './UserForm'
-// import UsersList from './UsersList'
 import UserContainer from './UserContainer'
 import WineContainer from './WineContainer'
 import UserWinesContainer from './UserWinesContainer'
 import {getAllUsers} from '../actions/userActions'
 import {getAllWines} from '../actions/wineActions'
-// import About from '../components/About'
 
 class Routing extends Component {
 
@@ -20,7 +17,6 @@ class Routing extends Component {
         this.props.getAllWines()
     };
 
-// const Routes = props => (
     render() {
         return (
         <Router>

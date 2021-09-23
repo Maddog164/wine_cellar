@@ -1,10 +1,7 @@
-// import React from 'react'
 import {Card} from 'react-bootstrap'
 
 const WineCard = (props) => {
-
-    console.log("I am in WineCard")
-    
+ 
     const wine = props.wine
         
     return(

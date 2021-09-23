@@ -1,13 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-// import {Link} from 'react-router-dom'
 import {getAllWines} from '../actions/wineActions'
-// import {Card} from 'react-bootstrap'
-// import { Container, Row, Col } from 'react-bootstrap'
 import WineCard from './WineCard'
-// import 'bootstrap/dist/css/bootstrap.min.css'
-
-// import { Container, Row, Col} from 'react-bootstrap'
 
 class WineContainer extends Component {
 

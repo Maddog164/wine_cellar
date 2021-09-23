@@ -8,8 +8,6 @@ class UserForm extends Component {
     state = {
         first_name: "",
         last_name: "",
-        // id: 1
-
     }
 
     handleOnChange = e => {
@@ -28,7 +26,6 @@ class UserForm extends Component {
         this.setState(prevState =>({
             first_name: "",
             last_name: "",
-            // id: prevState.id + 1
         }))
 
     }
