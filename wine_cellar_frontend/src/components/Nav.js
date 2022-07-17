@@ -25,6 +25,9 @@ class Navigate extends Component {
                             <li className="Nav_item">
                                 <Link className="Nav_link" to="/wines">Wines</Link>
                             </li>
+                            <li className="Nav_item">
+                                <Link className="Nav_link" to="/Search">Search</Link>
+                            </li>
                         </ul>
                     </div>
                 

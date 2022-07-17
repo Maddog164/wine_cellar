@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import Navigate from './Nav'
 import About from './About'
 import Home from './Home'
+import Search from './Search'
 import UserContainer from './UserContainer'
 import WineContainer from './WineContainer'
 import UserWinesContainer from './UserWinesContainer'
@@ -38,6 +39,7 @@ class Routing extends Component {
                             component = {UserWinesContainer} /> 
 
                         <Route exact path = "/wines" component = {WineContainer} />
+                        <Route exact path="/Search" component={Search} />
                 
                     </Switch>
             </div>
